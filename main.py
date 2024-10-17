@@ -211,17 +211,78 @@
 #Indexing operator - access elements of a sequence using []
 #[start : end : step]
 cc_number = "1234-5678-9123-4567"
-# print(cc_number[4])
-# using start:end
-# start is inclusive end is exclusive
-# print(cc_number[5:9])
-# you can use negative positions
-# print(cc_number[-1])
-# access by steps
-# print(cc_number[::2])
-# to invert a string
-# cc_number = cc_number[::-1]
-# print(f"{cc_number}")
+#print(cc_number[4])
+#using start:end
+#start is inclusive end is exclusive
+#print(cc_number[5:9])
+#you can use negative positions
+#print(cc_number[-1])
+#access by steps
+#print(cc_number[::2])
+#to invert a string
+#cc_number = cc_number[::-1]
+#print(f"{cc_number}")
 #last digits
-cc_number = cc_number[-4:]
-print(cc_number)
+#cc_number = cc_number[-4:]
+#print(cc_number)
+
+
+#Format specifiers - {value:flags}
+#format value based on flags
+# .(number)f = round to that many decimal places
+# :(number) = allocate that many spaces
+# :03 = allocate and zero pad that many spaces
+# :< = left justify
+# :> = right justify
+# :^ = center align
+# :+ = use a plus sign to indicate positive value
+# := = place sign to leftmost position
+# : = insert a space before positive numbers
+# :, = comma separator
+#
+# price1 = 12321.321
+# price2 = -2912.233
+# price3 = 42123.212
+#decimal places
+# print(f"Price 1 is ${price1:.1f}")
+# print(f"Price 2 is ${price2:.1f}")
+# print(f"Price 3 is ${price3:.1f}")
+#spaces to show numbers
+# print(f"Price 1 is ${price1:10}")
+# print(f"Price 2 is ${price2:10}")
+# print(f"Price 3 is ${price3:10}")
+#add a 0 to zero pad the spaces
+# print(f"Price 1 is ${price1:010}")
+# print(f"Price 2 is ${price2:010}")
+# print(f"Price 3 is ${price3:010}")
+#justify to left center and right
+# print(f"Price 1 is ${price1:<10}")
+# print(f"Price 2 is ${price2:^10}")
+# print(f"Price 3 is ${price3:>10}")
+#preced a positive sign to positive numbers
+# print(f"Price 1 is ${price1:+}")
+# print(f"Price 2 is ${price2:+}")
+# print(f"Price 3 is ${price3:+}")
+#preced a space to positive numbers
+# print(f"Price 1 is ${price1: }")
+# print(f"Price 2 is ${price2: }")
+# print(f"Price 3 is ${price3: }")
+#each thousand separate by ,
+#preced a positive sign to positive numbers
+# print(f"Price 1 is ${price1:,}")
+# print(f"Price 2 is ${price2:,}")
+# print(f"Price 3 is ${price3:,}")
+#a combination of flags
+#preced a positive sign to positive numbers
+# print(f"Price 1 is ${price1:+,.2f}")
+# print(f"Price 2 is ${price2:+,.2f}")
+# print(f"Price 3 is ${price3:+,.2f}")
+
+
+#WHILE loops - loop code while a condition remains true
+name = input("Enter your name: ")
+
+while name == "":
+    print("You didnt enter your name dumbass...")
+    name = input("Another chance to enter your name: ")
+print(f"Hi {name}")
